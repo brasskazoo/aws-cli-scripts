@@ -83,8 +83,9 @@ while (( "$#" )); do
       exit 1
       ;;
 
-    *)
-      error "No trailing arguments expected. See help (-h) for more information."
+    *) # preserve positional arguments
+      EXTRA_PARAMS="$EXTRA_PARAMS $1"
+      shift
       ;;
 
   esac
