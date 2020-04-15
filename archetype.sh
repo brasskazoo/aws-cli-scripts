@@ -30,7 +30,7 @@ function usage() {
   echo -e "Usage:\n"
   echo -e "    -p | --profile <profile>         Set AWS profile (otherwise uses environment set up)"
   echo -e "    -t | --target <resource_name>    Target individual resource"
-  echo -e "    -f | --format <output format>    Output as json or text"
+  echo -e "    -f | --format <output format>    Output as json | text | table | yaml | yaml-stream"
   echo -e "    -all                             Fetch info all resources"
   echo -e "    -h | --help                      Show this help screen"
   echo -e "${RCol}\n"
