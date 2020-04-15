@@ -98,8 +98,7 @@ fi
 # Main Execution
 #
 
-## Format is either 'text' or 'json'
-FORMAT="${FORMAT:-text}"
+FORMAT="${FORMAT:-json}"
 
 if [[ -z ${TARGET} ]]; then
     buckets="$(aws s3api list-buckets --query 'Buckets[].[Name]' --output text)"
@@ -107,7 +106,7 @@ else
     buckets=${TARGET}
 fi
 
-for bk in $buckets;
+for bk in ${buckets};
 do
 	echo "$(aws s3api get-public-access-block --bucket "${bk}" \
 		--query "{Bucket: '${bk}',

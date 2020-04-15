@@ -98,9 +98,7 @@ fi
 # Main Execution
 #
 
-
-## Format is either 'text' or 'json'
-FORMAT="${FORMAT:-text}"
+FORMAT="${FORMAT:-json}"
 
 if [[ -z ${TARGET} ]]; then
     buckets="$(aws s3api list-buckets --query 'Buckets[].[Name]' --output text)"
